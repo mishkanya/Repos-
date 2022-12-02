@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="TulaEducation.Controllers.EducationInfoController"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TulaEducation.Controllers"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Border Background="#006fb9" CornerRadius="20" Margin="20,20,20,0">
+        <Grid Margin="10">
+        <StackPanel>
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="White" FontSize="24" x:Name="Name">какая то шарага</TextBlock>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock x:Name="Location" FontSize="18" Foreground="White" TextWrapping="Wrap" Grid.Column="0" Grid.RowSpan="2">tetdsadasdasdasdasdasdagasdashdashdasgdaaagdasdasdasdasdghasdasgavdasgdvas</TextBlock>
+                    <TextBlock x:Name="Phone" FontSize="18" TextWrapping="Wrap" Grid.Row="0" Grid.Column="1" Foreground="White" TextAlignment="Center">+79207451885</TextBlock>
+                    <TextBlock x:Name="Email" FontSize="18" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Foreground="White" TextAlignment="Center">asbdvasda@mail.com</TextBlock>
+                    <Border Grid.Row="2" Grid.ColumnSpan="2" Height="1" Background="LightGray" Margin="5"/>
+                    <Button Style="{StaticResource ResourceKey=BlueYellow}" Grid.Row="3" Click="Edit" Grid.Column="0" HorizontalAlignment="Center">Изменить</Button>
+                    <Button Style="{StaticResource ResourceKey=BlueYellow}" Grid.Row="3" Click="Delete" Grid.Column="1" HorizontalAlignment="Center">Удалить</Button>
+                </Grid>
+        </StackPanel>
+            
+        </Grid>
+    </Border>
+</UserControl>
