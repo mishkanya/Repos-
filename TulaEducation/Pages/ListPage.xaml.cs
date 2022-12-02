@@ -23,6 +23,10 @@ namespace TulaEducation.Pages
     public partial class ListPage : Page
     {
         private IEnumerable<EducationInfoController> _educationInfoControllers;
+
+        public IEnumerable<EducationInfoController> EducationInfoControllers { get => EducationInfoControllers1; set => EducationInfoControllers1 = value; }
+        public IEnumerable<EducationInfoController> EducationInfoControllers1 { get => _educationInfoControllers; set => _educationInfoControllers = value; }
+
         public ListPage()
         {
             InitializeComponent();
@@ -37,7 +41,7 @@ namespace TulaEducation.Pages
             {
                 educationInfoControllers.Add(new EducationInfoController(item));
             }
-            _educationInfoControllers = educationInfoControllers;
+            EducationInfoControllers1 = educationInfoControllers;
             foreach (var item in educationInfoControllers)
             {
                 Container.Children.Add(item);
@@ -45,7 +49,7 @@ namespace TulaEducation.Pages
         }
         private void Search(string t)
         {
-            foreach (var item in _educationInfoControllers)
+            foreach (var item in EducationInfoControllers1)
             {
                     item.Visibility = item.GetAllText(t) ? Visibility.Visible: Visibility.Collapsed;
             }

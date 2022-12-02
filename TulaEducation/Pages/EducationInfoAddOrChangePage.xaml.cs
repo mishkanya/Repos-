@@ -12,10 +12,14 @@ namespace TulaEducation.Pages
     public partial class EducationInfoAddOrChangePage : Page
     {
         private EducationInfo _info;
+
+        public EducationInfo Info { get => Info1; set => Info1 = value; }
+        public EducationInfo Info1 { get => _info; set => _info = value; }
+
         public EducationInfoAddOrChangePage()
         {
             InitializeComponent();
-            _info = new EducationInfo()
+            Info1 = new EducationInfo()
             {
                 Id = default
             };
@@ -23,7 +27,7 @@ namespace TulaEducation.Pages
         public EducationInfoAddOrChangePage(EducationInfo info)
         {
             InitializeComponent();
-            _info = info;
+            Info1 = info;
             Name.Text = info.Name;
             Phone.Text = info.PhoneNubber;
             Email.Text = info.Emain;
@@ -46,14 +50,14 @@ namespace TulaEducation.Pages
                 MessageBox.Show("Почта введена не правильно", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Stop);
                 return;
             }
-            _info.Emain = Email.Text;
-            _info.PhoneNubber = Phone.Text;
-            _info.Location = Location.Text;
-            _info.Name = Name.Text;
-            if (_info.Id == default)
-                MainWindow.MainWorker.DataBase.Insert(_info, out string m);
+            Info1.Emain = Email.Text;
+            Info1.PhoneNubber = Phone.Text;
+            Info1.Location = Location.Text;
+            Info1.Name = Name.Text;
+            if (Info1.Id == default)
+                MainWindow.MainWorker.DataBase.Insert(Info1, out string m);
             else
-                MainWindow.MainWorker.DataBase.ChangeData<EducationInfo>(_info);
+                MainWindow.MainWorker.DataBase.ChangeData<EducationInfo>(Info1);
             MainWindow.MainWorker.MainFrame.FrameGoBack();
         }
 
