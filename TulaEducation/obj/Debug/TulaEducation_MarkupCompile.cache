@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Work\TulaEducation\TulaEducation\obj\Debug\
+C:\Users\Yakoo\Desktop\Repos-\TulaEducation\obj\Debug\
 TulaEducation
 none
 false
 DEBUG;TRACE
-D:\Work\TulaEducation\TulaEducation\App.xaml
+C:\Users\Yakoo\Desktop\Repos-\TulaEducation\App.xaml
 51586583984
-31518050249
+3398261700
 11-230828475
-127-786298303
+127-1050033286
 Controllers\EducationInfoController.xaml;MainWindow.xaml;Pages\EducationInfoAddOrChangePage.xaml;Pages\ListPage.xaml;Styles.xaml;
 
 False
